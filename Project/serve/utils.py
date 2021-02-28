@@ -35,3 +35,10 @@ def convert_and_pad(word_dict, sentence, pad=500):
             working_sentence[word_index] = INFREQ
             
     return working_sentence, min(len(sentence), pad)
+
+def identify_most_common_words(word_dict):
+    # swap key and value
+    idx_word = {v:k for k, v in word_dict.items()}
+
+    # print idx 2 to 7 (first five idx)
+    print('dict most common word is: {}'.format([idx_word[i] for i in range(2, 7)]))
